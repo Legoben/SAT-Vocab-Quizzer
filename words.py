@@ -12,6 +12,7 @@ import webbrowser
 #    notice.show()
 #    return
 
+first = True
 
 def doWords(arg):
 	print("here")
@@ -23,9 +24,12 @@ def doWords(arg):
 	rumps.notification(tchoice['word'] + " means:", "",tchoice['def'])
 	print(tchoice['word'] + " means:",tchoice['def'])
 	
-	if timer.interval != 300:
-		timer.interval = 300
-		print("Change int")
+	#global first
+	#if first == True:
+	#	global timer
+	#	timer.interval = 300
+	#	print "changed int"
+	#	first = False
 	
 	
 
@@ -71,7 +75,7 @@ def do_quit(_):
 	
 
 app = rumps.App('SAT Words', quit_button=None)
-timer = rumps.Timer(doWords, 40)
+timer = rumps.Timer(doWords, 300)
 timer.start()
 app.run()
 
