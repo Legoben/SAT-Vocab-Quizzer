@@ -60,6 +60,9 @@ for word in txtarry:
 	#print(defintion)
 	wdef.append({"word":tword,"def":defintion})
 
+@rumps.clicked("View SAT Math Notes")
+def open_github(_):
+	webbrowser.open_new_tab("http://bens.li/satm")
 
 @rumps.clicked("View words on Quizlet")
 def open_github(_):
