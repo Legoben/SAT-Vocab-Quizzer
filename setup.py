@@ -1,7 +1,7 @@
 from setuptools import setup
 
 APP = ['words.py']
-DATA_FILES = ['words.txt']
+DATA_FILES = ['words.txt', 'dockicon.png']
 OPTIONS = {
     'argv_emulation': True,
     'iconfile':'icon.icns',

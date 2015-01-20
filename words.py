@@ -61,10 +61,13 @@ for word in txtarry:
 	wdef.append({"word":tword,"def":defintion})
 
 
+@rumps.clicked("View words on Quizlet")
+def open_github(_):
+	webbrowser.open_new_tab("http://quizlet.com/SAT_ghost/folders/sat")
+	
 @rumps.clicked("View Source")
 def open_github(_):
 	webbrowser.open_new_tab("https://github.com/Legoben/SAT-Vocab-Quizzer")
-	pass
 
 
 @rumps.clicked('Quit')
@@ -74,7 +77,7 @@ def do_quit(_):
     
 	
 
-app = rumps.App('SAT Words', quit_button=None)
+app = rumps.App('SAT', icon="dockicon.png", quit_button=None)
 timer = rumps.Timer(doWords, 300)
 timer.start()
 app.run()
